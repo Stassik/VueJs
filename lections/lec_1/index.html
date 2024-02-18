@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS: Lection 1</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <button v-on:click="changeText">click button</button>
+        <h2>Счетчик</h2>
+        <button v-on:click="increase(4)">counter button</button>
+        <p>{{ count }}</p>
+        <h2 v-on:mousemove="mouseMove($event)">Mousemove {{ x }} = {{ y }}
+            <span v-on:mousemove.stop.prevent>STOP</span>
+            <p v-html="bigText">{{ bigText }}</p>
+        </h2>
+        <h3 v-if="productAddCart">Добавить товар в корзину? </h3>
+        <h3 v-else="!productAddCart">Товар добавлен в корзину</h3>
+        <h3 v-show="productAddCart">show</h3>
+        <button @click="productAddCart = !productAddCart">ADD product</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue',
+                count: 0,
+                x: 0,
+                y: 0,
+                bigText: 'big text <span><a href="#">info</a></span>',
+                productAddCart: true,
+            },
+            methods: {
+                mouseMove(event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                },
+                changeText() {
+                    this.message = 'text click';
+                },
+                increase(step) {
+                    this.count += step;
+                }
+            },
+        })
+
+
+    </script>
+</body>
+
+</html>
