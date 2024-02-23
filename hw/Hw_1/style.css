@@ -277,7 +277,8 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 27px;
+    column-gap: 27px;
+    row-gap: 30px;
 }
 
 .articles__item {
@@ -289,11 +290,11 @@ a {
     border: 1px solid #E7E7E7;
 }
 
-.articles__item:nth-child(even) {
+.articles__item:nth-child(2) {
     background-color: #F4F0EC;
 }
 
-.articles__item:nth-child(even) .articles__item-btn {
+.articles__item:nth-child(2) .articles__item-btn {
     background-color: #fff;
 }
 
