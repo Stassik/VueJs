@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>Калькулятор</h2>
+        <input type="text" name="" id="" v-model="backgroundColor">
+        <input type="text" name="" id="" v-model="blockWidth">
+        <div class="" :style="blockStyle"></div>
+        <input type="text" name="" id=""><button>Отправить</button>
+        <h2>Link el</h2>
+        <a :href="linkHref">new link</a>
+        <img v-bind:src="imgPhoto" alt="photo">
+        <div class="block" :style="styleBlock">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+        </div>
+        <h2>{{modelData}}</h2>
+        <input type="text" name="" id="" v-model="modelData">
+        <h2>Калькулятор</h2>
+        <input type="text" name="" id="" v-model.number="firstNum">
+        <input type="text" name="" id="" v-model.number="secondNum">
+        =
+        {{ result }}
+        <button @click="plus()">+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
