@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar 2</title>
+</head>
+
+<body>
+    <div id="product">
+        <div class="product__name">{{ name }}</div>
+        <div class="product__price">{{newPrice}}</div>
+        <div class="">Скидка: {{ discount }}%</div>
+        <img v-bind:src="url" alt="" class="">
+        <button v-on:click="generateDiscount">Сгенерировать скидку</button>
+    </div>
+    <ul id="users">
+        <li v-for="user in usersData" :key="user.id">
+            <p>{{ user.name }}</p>
+            <p>{{ user.age }}</p>
+        </li>
+    </ul>
+    <div id="listing">
+        <div class="" v-for="item in items" :key="item.id">
+            <input type="number" :name="item.name" :id="item.id" v-model="item.count"><input type="checkbox"
+                v-model="item.inCart" :name="item.name" :id="item.id">{{item.name}} - {{item.inCart}}
+        </div>
+    </div>
+
+    <div id="contacts" v-on:submit="addNewContact">
+        <form action="" class="contacts__form">
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" v-model="newContact.name">
+            <label for="lastname">Фамилия:</label>
+            <input type="text" name="lastname" id="lastname" v-model="newContact.lastName">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" v-model="newContact.email">
+            <button>Записать</button>
+        </form>
+        <h2>Список контактов</h2>
+        <ul class="contacts__list">
+            <li class="contacts__item" v-for="contact in users" :key="contact.id">
+                <p>{{contact.name}}</p>
+                <p>{{contact.lastName}}</p>
+                <p>{{contact.email}}</p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./vuescript.js"></script>
+</body>
+
+</html>
