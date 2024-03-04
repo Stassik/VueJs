@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar 3</title>
+</head>
+
+<body>
+    <div id="app3">
+        <counter></counter>
+    </div>
+    <div id="app4" class="task__list">
+
+        <task-manager></task-manager>
+    </div>
+
+    <div id="app5">
+        <list-elements></list-elements>
+
+
+    </div>
+    <div id="app6">
+        <button v-on:click="sortByPrice(true)">По возрастанию</button>
+        <button v-on:click="sortByPrice(false)">По убыванию</button>
+        <product v-for="product in products" :product="product"></product>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
